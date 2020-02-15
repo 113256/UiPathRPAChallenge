@@ -110,7 +110,7 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:LoadImage DisplayName="Load Image" FileName="Images\Address1.png" sap2010:WorkflowViewState.IdRef="LoadImage_1" Image="[i]" />
+    <ui:LoadImage DisplayName="Load Image" FileName="Images\ZipCode.png" sap2010:WorkflowViewState.IdRef="LoadImage_1" Image="[i]" />
     <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
       <ui:ClickImage.CursorPosition>
         <ui:CursorPosition Position="Center">
@@ -123,13 +123,13 @@
         </ui:CursorPosition>
       </ui:ClickImage.CursorPosition>
       <ui:ClickImage.Image>
-        <ui:ImageTarget TargetImageBase64="{x:Null}" Accuracy="0.75" Image="[i]" />
+        <ui:ImageTarget TargetImageBase64="{x:Null}" Accuracy="0.8" Image="[i]" />
       </ui:ClickImage.Image>
       <ui:ClickImage.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='Automation Challenge' /&gt;&lt;webctrl id='demand_table' tag='TABLE' /&gt;&lt;webctrl tableCol='1' tableRow='7' tag='TD' /&gt;" TimeoutMS="500" WaitForReady="INTERACTIVE" />
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='Automation Challenge' /&gt;&lt;webctrl parentid='demand_tbody' tableRow='3' tag='IMG' /&gt;" TimeoutMS="500" WaitForReady="INTERACTIVE" />
       </ui:ClickImage.Target>
     </ui:ClickImage>
-    <sads:DebugSymbol.Symbol>d0VEOlxVSVBhdGggUHJvamVjdHNcVWlQYXRoUlBBQ2hhbGxlbmdlXENoYWxsZW5nZTJcY2hhbGxlbmdlMlx0ZXN0LnhhbWwLQAOFAQ4CAQFFBVsVAgENXAVwFQIBDHEFcYcBAgEIcgWDARUCAQJxNXFKAgELcX9xhAECAQmBAUqBAesBAgEHgQH2AYEB+wECAQZ+TH5RAgEEfj9+RQIBAw==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0VEOlxVSVBhdGggUHJvamVjdHNcVWlQYXRoUlBBQ2hhbGxlbmdlXENoYWxsZW5nZTJcY2hhbGxlbmdlMlx0ZXN0LnhhbWwLQAOFAQ4CAQFFBVsVAgENXAVwFQIBDHEFcYYBAgEIcgWDARUCAQJxNXFJAgELcX5xgwECAQmBAUqBAcgBAgEHgQHTAYEB2AECAQZ+S35QAgEEfj9+RAIBAw==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
