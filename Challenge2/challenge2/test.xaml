@@ -1,0 +1,196 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="test" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="test_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="test" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:Image" Name="i" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="t" />
+    </Sequence.Variables>
+    <ui:CommentOut DisplayName="Comment Out" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'TD'" sap2010:WorkflowViewState.IdRef="GetOCRText_2">
+            <ui:GetOCRText.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+                <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" DisplayName="Microsoft OCR" ExtractWords="False" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="3" />
+              </ActivityFunc>
+            </ui:GetOCRText.OCREngine>
+            <ui:GetOCRText.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2d388ed233def9fa1804ea73af15e241" Selector="&lt;html app='chrome.exe' title='Automation Challenge' /&gt;&lt;webctrl id='demand_table' tag='TABLE' /&gt;&lt;webctrl tableCol='1' tableRow='4' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:GetOCRText.Target>
+            <ui:GetOCRText.Text>
+              <OutArgument x:TypeArguments="ui:GenericValue">[t]</OutArgument>
+            </ui:GetOCRText.Text>
+          </ui:GetOCRText>
+          <WriteLine DisplayName="Write Line" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[t]" />
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="625ca9a5355bb860de9d08ebafea8534" Selector="&lt;html app='chrome.exe' title='Automation Challenge' /&gt;&lt;webctrl aaname='Submit Form' tag='BUTTON' type='button' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:Click.Target>
+          </ui:Click>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:LoadImage DisplayName="Load Image" FileName="Images\Address1.png" sap2010:WorkflowViewState.IdRef="LoadImage_1" Image="[i]" />
+    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget TargetImageBase64="{x:Null}" Accuracy="0.75" Image="[i]" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='Automation Challenge' /&gt;&lt;webctrl id='demand_table' tag='TABLE' /&gt;&lt;webctrl tableCol='1' tableRow='7' tag='TD' /&gt;" TimeoutMS="500" WaitForReady="INTERACTIVE" />
+      </ui:ClickImage.Target>
+    </ui:ClickImage>
+    <sads:DebugSymbol.Symbol>d0VEOlxVSVBhdGggUHJvamVjdHNcVWlQYXRoUlBBQ2hhbGxlbmdlXENoYWxsZW5nZTJcY2hhbGxlbmdlMlx0ZXN0LnhhbWwLQAOFAQ4CAQFFBVsVAgENXAVwFQIBDHEFcYcBAgEIcgWDARUCAQJxNXFKAgELcX9xhAECAQmBAUqBAesBAgEHgQH2AYEB+wECAQZ+TH5RAgEEfj9+RQIBAw==</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="MicrosoftOCR_1" sap:VirtualizedContainerService.HintSize="200,22.4" />
+      <sap2010:ViewStateData Id="GetOCRText_2" sap:VirtualizedContainerService.HintSize="210.4,52.8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_2" sap:VirtualizedContainerService.HintSize="210.4,62.4" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="336.8,280">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CommentOut_2" sap:VirtualizedContainerService.HintSize="314.4,52.8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Click_1" sap:VirtualizedContainerService.HintSize="200,52.8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="222.4,177.6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CommentOut_4" sap:VirtualizedContainerService.HintSize="314.4,52.8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="LoadImage_1" sap:VirtualizedContainerService.HintSize="314.4,60" />
+      <sap2010:ViewStateData Id="ClickImage_1" sap:VirtualizedContainerService.HintSize="314.4,68.8" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="336.8,479.2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="test_1" sap:VirtualizedContainerService.HintSize="376.8,559.2" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
